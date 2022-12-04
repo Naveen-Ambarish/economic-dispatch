@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <body onload="load()">
+    <script>
+        function load(){
+            var number = sessionStorage.getItem("numberOfGen");
+            var newWindow = window.open("", "_parent");
+            newWindow.document.write('<div class = "row">');
+            newWindow.document.write("<form>");
+            newWindow.document.write('<label for="Pload">Total Load:</label>');
+            newWindow.document.write('<input type="text" id="Pload"/><br>');
+            for(i = 0; i < number; i++) {
+                newWindow.document.write('<label for="a'+ i +'">a:</label>');
+                newWindow.document.write('<input type="text" id="a' + i + '"/>');
+                newWindow.document.write('<label for="b'+ i +'">b:</label>');
+                newWindow.document.write('<input type="text" id="b' + i + '"/>');
+                newWindow.document.write('<label for="c'+ i +'">c:</label>');
+                newWindow.document.write('<input type="text" id="c' + i + '"/>');
+                newWindow.document.write('<label for="Pmax'+ i +'">Max Power:</label>');
+                newWindow.document.write('<input type="text" id="Pmax' + i + '"/>');
+                newWindow.document.write('<label for="Pmin'+ i +'">Min Power:</label>');
+                newWindow.document.write('<input type="text" id="Pmin' + i + '"/><br>');
+                
+            }
+            
+            
+            newWindow.document.write("</form>");
+            newWindow.document.write('<button class = "back" onclick="back1()">Back</button>');
+            newWindow.document.write('<button class = "calculate" onclick="calculate()">Calculate</button>');
+            newWindow.document.write('</div>');
+            newWindow.document.write('<link rel="stylesheet" href="style2.css">');
+
+            for(i = 0; i < number; i++) {
+            document.getElementById("a"+i).value = get("a"+i);
+            document.getElementById("b"+i).value = get("b"+i);
+            document.getElementById("c"+i).value = get("c"+i);
+            document.getElementById("Pmax"+i).value = get("Pmax"+i);
+            document.getElementById("Pmin"+i).value = get("Pmin"+i);
+        }
+            document.getElementById("Pload").value = get("Pload");
+
+            function get(item){
+                if(sessionStorage.getItem(item)){
+                    return sessionStorage.getItem(item);
+                }
+                else{
+                    return "";
+                }
+            }
+        }
+    </script>
+    <script src="calculate.js"></script>
+
+</body>
+</html>

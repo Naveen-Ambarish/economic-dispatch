@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body onload="load()"></body>
+    <script>
+        function load(){
+            var number = sessionStorage.getItem("numberOfGen");
+            var newWindow = window.open("", "_parent");
+            newWindow.document.write('<div class = "row">');
+            newWindow.document.write("<table>");
+            newWindow.document.write("<tr>");
+            newWindow.document.write("<th></th>");
+            newWindow.document.write("<th>Lambda Iteration</th>");
+            newWindow.document.write("<th>Grey Wolf Optimisation</th>");
+            newWindow.document.write("</tr>");
+
+            var lambdaCost = Number(sessionStorage.getItem("lambdaCost")).toFixed(2);
+            var GWOCost = Number(sessionStorage.getItem("GWOCost")).toFixed(2);
+            newWindow.document.write('<tr><td>Total Cost</td><td>'+lambdaCost+'</td><td>'+GWOCost+'</td></tr>');
+            for(i = 0; i < number; i++) {
+                var l = Number(sessionStorage.getItem("lambda"+i)).toFixed(2);
+                var g = Number(sessionStorage.getItem("GWO"+i)).toFixed(2);
+                newWindow.document.write("<tr>");
+                newWindow.document.write('<td>Generator '+(i+1)+'</td>');
+                newWindow.document.write('<td>'+l+'</td>');
+                newWindow.document.write('<td>'+g+'</td>');
+                newWindow.document.write("</tr>");
+                newWindow.document.write("</tr>");
+                    
+            }
+            newWindow.document.write("</table>");
+            newWindow.document.write('<button class = "calc" onclick="back2()">Back</button>');
+            newWindow.document.write('</div>');
+            newWindow.document.write('<link rel="stylesheet" href="style3.css">');
+            }
+        function back2(){
+            window.location.href='next.html';
+        }
+    </script>
+</html>

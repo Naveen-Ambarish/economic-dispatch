@@ -1,0 +1,64 @@
+body {
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
+    overflow:  scroll;
+    text-align: center;
+    }.row{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: aliceblue;
+        width: 95%;
+        height:95%;
+        border-radius:10px;
+        overflow: scroll;
+    }
+
+button{
+    
+    height:30px;
+    width: 100px;
+    background: rgb(93, 93, 176);
+    border: 2px solid;
+    border-radius: 25px;
+    font-weight: 500;
+    border-color: rgb(93, 93, 176);
+    color: aliceblue;
+  }
+  button:hover{
+    border-color: black;
+    transition: 0.5ms;
+    color: gold;
+    cursor: pointer;
+  }
+  table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    border: 1px solid;
+  }
+
+body{}.calc{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    border: 2px solid;
+    font-weight: 500;
+    border-color: rgb(93, 93, 176);
+  }
+
+th {
+    padding: 15px;
+    text-align: center;
+    border: 2px solid;
+    font-weight: 500;
+    border-color: rgb(93, 93, 176);
+  }

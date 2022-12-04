@@ -1,0 +1,69 @@
+body {
+  background: linear-gradient(120deg,#2980b9,#8e44ad);
+  overflow:  hidden;
+  text-align: center;
+  }.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow:  hidden;
+    background: honeydew;
+    height: 200px;
+    width: 25%;
+    border-radius:10px;
+  }.button{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow:  hidden;
+  }
+button{
+  height:30px;
+  width: 100px;
+  background: rgb(93, 93, 176);
+  border: 2px solid;
+  border-radius: 25px;
+  font-weight: 500;
+  border-color: rgb(93, 93, 176);
+  color: aliceblue;
+}
+form{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.text{
+  font-size:30px ;
+}
+
+form.input{
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: honeydew;
+  width: 100px;
+  
+}
+input:hover{
+    border-color: black;
+    transition: 0.5s;
+}
+
+button:hover{
+  border-color: black;
+  transition: 0.5ms;
+  color: gold;
+  cursor: pointer;
+}
+
+h1{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: azure;
+}
